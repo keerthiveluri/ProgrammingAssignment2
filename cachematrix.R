@@ -1,18 +1,18 @@
-makeCacheMatrix <- function(x = matrix()) {
+setwd('C:/Users/keert/Documents/Coursera-R')
+makeCacheMatrix <- function(x = matrix((sample(1:100,9),3,3)) {
   inv <- NULL
   set <- function(y) {
     x <<- y
     inv <<- NULL
   }
-  get <- function() x
+  get <- function(y) 
   setInverse <- function(inverse) inv <<- inverse
   getInverse <- function() inv
   list(set = set, get = get,setInverse = setInverse,getInverse = getInverse)
 }
 
 cacheSolve <- function(x, ...) {
-  ## Return a matrix that is the inverse of 'x'
-  inv <- x$getinv()
+   inv <- x$getinv()
   if(!is.null(inv)) {
     message("getting cached result")
     return(inv)
